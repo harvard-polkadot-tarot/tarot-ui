@@ -1,0 +1,509 @@
+{
+    "Major Arcana": [
+    {
+      "Number": 1,
+      "Name": "The Fool",
+      "Description": "A symbol of starting fresh, trusting in what lies ahead, a lack of experience, facing the unknown, beginner’s luck, going with the flow, and having faith in the greater universe.",
+      "Crypto Link": {
+        "Name": "Laura Shin",
+        "Reason": "Shin's pioneering role in exploring and reporting on the crypto space embodies the Fool's spirit of adventure and new beginnings.",
+        "Bio": "A journalist and former senior editor at Forbes, first mainstream reporter to cover crypto full-time, host of Unchained and Unconfirmed podcasts.",
+        "Link": "https://laurashin.com/"
+      }
+    },
+    {
+      "Number": 2,
+      "Name": "The Magician",
+      "Description": "Skill, resourcefulness, power, inspired action",
+      "Crypto Link": {
+        "Name": "Gavin Andresen",
+        "Reason": "Andresen's ability to take over and lead the development of Bitcoin shows his resourcefulness and skill, embodying the Magician's qualities of manifesting ideas into reality.",
+        "Bio": "An American software developer known for his role in Bitcoin's development, taking over from Satoshi Nakamoto. He also founded the Bitcoin Foundation and created ClearCoin.",
+        "Link": "https://en.wikipedia.org/wiki/Gavin_Andresen"
+      }
+    },
+    {
+      "Number": 3,
+      "Name": "The High Priestess",
+      "Description": "Mystery, wisdom, intuition",
+      "Crypto Link": {
+        "Name": "Cynthia Dwork",
+        "Reason": "Dwork's work in cryptography and privacy, dealing with hidden and complex knowledge, aligns with the High Priestess's themes of mystery and wisdom.",
+        "Bio": "An American computer scientist known for her contributions to cryptography, distributed computing, and algorithmic fairness.",
+        "Link": "https://en.wikipedia.org/wiki/Cynthia_Dwork"
+      }
+    },
+    {
+      "Number": 4,
+      "Name": "The Empress",
+      "Description": "Nurturing, creativity, growth",
+      "Crypto Link": {
+        "Name": "Dawn Song",
+        "Reason": "Song's role in fostering innovation and growth in the blockchain space aligns with the Empress's nurturing and creative qualities.",
+        "Bio": "Founder of Oasis Labs, a leader in blockchain innovation and privacy-preserving smart contracts.",
+        "Link": "https://en.wikipedia.org/wiki/Dawn_Song"
+      }
+    },
+    {
+      "Number": 5,
+      "Name": "The Emperor",
+      "Description": "Authority, structure, control",
+      "Crypto Link": {
+        "Name": "Wei Dai",
+        "Reason": "Dai's foundational work in creating structured systems in the crypto world aligns with the Emperor's qualities of authority and establishing order.",
+        "Bio": "A computer engineer known for the b-money cryptocurrency system and contributions to cryptography.",
+        "Link": "https://en.wikipedia.org/wiki/Wei_Dai"
+      }
+    },
+    {
+      "Number": 6,
+      "Name": "The Hierophant",
+      "Description": "Tradition, wisdom, teaching",
+      "Crypto Link": {
+        "Name": "David Chaum",
+        "Reason": "Chaum's foundational work in cryptography and digital currency represents the Hierophant's role in maintaining and disseminating traditional knowledge and wisdom.",
+        "Bio": "A pioneer in cryptography and digital currency, creator of eCash. CEO of Elixxer.",
+        "Link": "https://en.wikipedia.org/wiki/David_Chaum"
+      }
+    },
+    {
+      "Number": 7,
+      "Name": "The Lovers",
+      "Description": "Partnership, duality, complex relationships",
+      "Crypto Link": {
+        "Name": "Ilya “Dutch” Lichtenstein and Heather Morgan",
+        "Reason": "Lichtenstein and Morgan's infamous collaboration and the complexity of their relationship reflect the Lovers' themes of partnership and duality.",
+        "Bio": "This 'crypto power couple' was involved in a high-profile case related to laundering stolen cryptocurrency.",
+        "Link": "https://www.vanityfair.com/news/2022/08/the-ballad-of-razzlekhan-and-dutch-bitcoins-bonnie-and-clyde"
+      }
+    },
+    {
+      "Number": 8,
+      "Name": "The Chariot",
+      "Description": "Determination, willpower, success",
+      "Crypto Link": {
+        "Name": "Charlie Lee",
+        "Reason": "Lee's creation and promotion of Litecoin showcase the Chariot's determination and success in forging a new path in the crypto world.",
+        "Bio": "The creator of Litecoin, a significant cryptocurrency aiming for fast and low-cost transactions.",
+        "Link": "https://en.wikipedia.org/wiki/Charlie_Lee_(computer_scientist)"
+      }
+    },
+    {
+      "Number": 9,
+      "Name": "Strength",
+      "Description": "Courage, determination, patience",
+      "Crypto Link": {
+        "Name": "Andreas M. Antonopoulos",
+        "Reason": "Antonopoulos's advocacy and educational efforts in the Bitcoin community reflect Strength's qualities of courage, determination, and patience.",
+        "Bio": "An author and Bitcoin evangelist, known for his books and educational work in the crypto space, guiding people through the complex world of Bitcoin and blockchain.",
+        "Link": "https://en.wikipedia.org/wiki/Andreas_Antonopoulos"
+      }
+    },
+    {
+      "Number": 10,
+      "Name": "The Hermit",
+      "Description": "Wisdom, introspection, guidance",
+      "Crypto Link": {
+        "Name": "Adam Back",
+        "Reason": "Back's role as a guiding figure in the crypto community, with his deep understanding and contributions, aligns with the Hermit's qualities of wisdom and introspection.",
+        "Bio": "A British cryptographer who invented Hashcash and is the CEO of Blockstream.",
+        "Link": "https://en.wikipedia.org/wiki/Adam_Back"
+      }
+    },
+    {
+      "Number": 11,
+      "Name": "Wheel of Fortune",
+      "Description": "Change, cycles, inevitable fate",
+      "Crypto Link": {
+        "Name": "Gavin Wood",
+        "Reason": "Wood's innovative contributions to blockchain technology and his role in shaping its future align with the Wheel of Fortune's themes of change and cycles.",
+        "Bio": "Co-founder of Ethereum and creator of Solidity, founder of Polkadot.",
+        "Link": "https://en.wikipedia.org/wiki/Gavin_Wood"
+      }
+    },
+    {
+      "Number": 12,
+      "Name": "Justice",
+      "Description": "Fairness, truth, law",
+      "Crypto Link": {
+        "Name": "Nick Szabo",
+        "Reason": "Szabo's work in establishing fair and secure protocols in the crypto space aligns with Justice's themes of fairness and truth.",
+        "Bio": "A renowned cryptographer who pioneered smart contracts and developed the concept of bit gold.",
+        "Link": "https://en.wikipedia.org/wiki/Nick_Szabo"
+      }
+    },
+    {
+      "Number": 13,
+      "Name": "The Hanged Man",
+      "Description": "New perspectives, sacrifice, innovative thinking",
+      "Crypto Link": {
+        "Name": "David Schwartz",
+        "Reason": "Schwartz's innovative approach to cross-border payments and his work on the XRP Ledger align with the Hanged Man's themes of new perspectives and innovative thinking.",
+        "Bio": "Chief Technology Officer at Ripple Labs, architect of the XRP Ledger.",
+        "Link": "https://www.mitfintech.com/speakers-2021/david-schwartz"
+      }
+    },
+    {
+      "Number": 14,
+      "Name": "Death",
+      "Description": "Transformation, endings, new beginnings",
+      "Crypto Link": {
+        "Name": "Hal Finney",
+        "Reason": "Finney's pioneering work and transformative impact on Bitcoin and cryptographic privacy resonate with Death's themes of transformation and new beginnings.",
+        "Bio": "An early Bitcoin developer, recipient of the first Bitcoin transaction, and a pioneer in cryptographic privacy.",
+        "Link": "https://en.wikipedia.org/wiki/Hal_Finney_(computer_scientist)"
+      }
+    },
+    {
+      "Number": 15,
+      "Name": "Temperance",
+      "Description": "Balance, moderation, patience",
+      "Crypto Link": {
+        "Name": "Vitalik Buterin",
+        "Reason": "Buterin's balanced approach to innovation and his work in creating Ethereum align with Temperance's qualities of balance and moderation.",
+        "Bio": "Co-founder of Ethereum, a leading blockchain platform for smart contracts and decentralized applications.",
+        "Link": "https://en.wikipedia.org/wiki/Vitalik_Buterin"
+      }
+    },
+    {
+        "Number": 16,
+        "Name": "The Devil",
+        "Description": "Challenge, breaking free, confronting the status quo",
+        "Crypto Link": {
+          "Name": "Roger Ver",
+          "Reason": "Ver's controversial stance and advocacy for Bitcoin Cash, often challenging the status quo, align with the Devil's themes of confrontation and breaking free.",
+          "Bio": "Early investor in Bitcoin, advocate for Bitcoin Cash, known as 'Bitcoin Jesus' for his evangelism of Bitcoin.",
+          "Link": "https://en.wikipedia.org/wiki/Roger_Ver"
+        }
+      },
+      {
+        "Number": 17,
+        "Name": "The Tower",
+        "Description": "Upheaval, change, revelation",
+        "Crypto Link": {
+          "Name": "Elizabeth Stark",
+          "Reason": "Stark's work on the Lightning Network, aiming to revolutionize Bitcoin's scalability, resonates with the Tower's symbolism of sudden change and innovation.",
+          "Bio": "Co-founder of Lightning Labs, working on the Lightning Network to improve Bitcoin scalability.",
+          "Link": "https://cointelegraph.com/top-people-in-crypto-and-blockchain-2021/elizabeth-stark"
+        }
+      },
+      {
+        "Number": 18,
+        "Name": "The Star",
+        "Description": "Hope, inspiration, faith",
+        "Crypto Link": {
+          "Name": "Jens Groth",
+          "Reason": "Groth's innovative work in cryptography and his role in advancing secure protocols align with the Star's qualities of hope and inspiration.",
+          "Bio": "Renowned cryptographer and principal researcher at DFINITY, known for contributions to zero-knowledge proofs.",
+          "Link": "https://www.benthamsgaze.org/author/jgroth/"
+        }
+      },
+      {
+        "Number": 19,
+        "Name": "The Moon",
+        "Description": "Illusion, mystery, subconscious",
+        "Crypto Link": {
+          "Name": "Zooko Wilcox",
+          "Reason": "Wilcox's focus on privacy and the complexities of digital security reflect the Moon's themes of mystery and hidden truths.",
+          "Bio": "The CEO of Electric Coin Company, known for his work on Zcash, a privacy-focused cryptocurrency.",
+          "Link": "https://en.wikipedia.org/wiki/Zooko_Wilcox-O%27Hearn"
+        }
+      },
+      {
+        "Number": 20,
+        "Name": "The Sun",
+        "Description": "Success, vitality, enlightenment",
+        "Crypto Link": {
+          "Name": "Charles Hoskinson",
+          "Reason": "Hoskinson's significant contributions to blockchain technology and the success of his projects align with the Sun's qualities of enlightenment and vitality.",
+          "Bio": "Co-founder of Ethereum and founder of Cardano, focusing on security and scalability.",
+          "Link": "https://en.wikipedia.org/wiki/Charles_Hoskinson"
+        }
+      },
+      {
+        "Number": 21,
+        "Name": "Judgment",
+        "Description": "Reflection, reckoning, awakening",
+        "Crypto Link": {
+          "Name": "Riccardo Spagni",
+          "Reason": "Spagni's role in enhancing privacy and security in the digital currency space reflects Judgment's themes of reflection and awakening.",
+          "Bio": "Former lead maintainer of Monero, a privacy-focused cryptocurrency.",
+          "Link": "https://cryptoslate.com/people/riccardo-spagni/"
+        }
+      },
+      {
+        "Number": 22,
+        "Name": "The World",
+        "Description": "Completion, accomplishment, integration",
+        "Crypto Link": {
+          "Name": "Satoshi Nakamoto",
+          "Reason": "Nakamoto's creation of Bitcoin and its revolutionary impact on the world align with the World’s themes of completion and accomplishment.",
+          "Bio": "The pseudonymous creator of Bitcoin and author of its white paper.",
+          "Link": "https://en.wikipedia.org/wiki/Satoshi_Nakamoto"
+        }
+    }
+
+   ],
+   "Minor Arcana": [
+    {
+        "Number": 1,
+        "Name": "Ace of Cups",
+        "Description": "new beginnings, love, emotions"
+      },
+      {
+        "Number": 2,
+        "Name": "Two of Cups",
+        "Description": "partnership, harmony, attraction"
+      },
+      {
+        "Number": 3,
+        "Name": "Three of Cups",
+        "Description": "celebration, friendship, creativity"
+      },
+      {
+        "Number": 4,
+        "Name": "Four of Cups",
+        "Description": "contemplation, apathy, reevaluation"
+      },
+      {
+        "Number": 5,
+        "Name": "Five of Cups",
+        "Description": "loss, grief, disappointment"
+      },
+      {
+        "Number": 6,
+        "Name": "Six of Cups",
+        "Description": "nostalgia, memories, reunion"
+      },
+      {
+        "Number": 7,
+        "Name": "Seven of Cups",
+        "Description": "choices, illusions, opportunities"
+      },
+      {
+        "Number": 8,
+        "Name": "Eight of Cups",
+        "Description": "withdrawal, journey, abandonment"
+      },
+      {
+        "Number": 9,
+        "Name": "Nine of Cups",
+        "Description": "contentment, satisfaction, wish fulfillment"
+      },
+      {
+        "Number": 10,
+        "Name": "Ten of Cups",
+        "Description": "happiness, fulfillment, family"
+      },
+      {
+        "Number": 11,
+        "Name": "Page of Cups",
+        "Description": "curiosity, creativity, messages"
+      },
+      {
+        "Number": 12,
+        "Name": "Knight of Cups",
+        "Description": "romance, adventure, charm"
+      },
+      {
+        "Number": 13,
+        "Name": "Queen of Cups",
+        "Description": "compassion, intuition, calm"
+      },
+      {
+        "Number": 14,
+        "Name": "King of Cups",
+        "Description": "balance, wisdom, diplomacy"
+      },
+      {
+        "Number": 15,
+        "Name": "Ace of Swords",
+        "Description": "clarity, breakthrough, truth"
+      },
+      {
+        "Number": 16,
+        "Name": "Two of Swords",
+        "Description": "indecision, stalemate, choices"
+      },
+      {
+        "Number": 17,
+        "Name": "Three of Swords",
+        "Description": "heartbreak, betrayal, sorrow"
+      },
+      {
+        "Number": 18,
+        "Name": "Four of Swords",
+        "Description": "rest, recovery, contemplation"
+      },
+      {
+        "Number": 19,
+        "Name": "Five of Swords",
+        "Description": "conflict, defeat, tension"
+      },
+      {
+        "Number": 20,
+        "Name": "Six of Swords",
+        "Description": "transition, moving on, journey"
+      },
+      {
+        "Number": 21,
+        "Name": "Seven of Swords",
+        "Description": "deception, strategy, betrayal"
+      },
+      {
+        "Number": 22,
+        "Name": "Eight of Swords",
+        "Description": "restriction, fear, imprisonment"
+      },
+      {
+        "Number": 23,
+        "Name": "Nine of Swords",
+        "Description": "anxiety, despair, nightmares"
+      },
+      {
+        "Number": 24,
+        "Name": "Ten of Swords",
+        "Description": "endings, betrayal, loss"
+      },
+      {
+        "Number": 25,
+        "Name": "Page of Swords",
+        "Description": "curiosity, vigilance, communication"
+      },
+      {
+        "Number": 26,
+        "Name": "Knight of Swords",
+        "Description": "action, ambition, determination"
+      },
+      {
+        "Number": 27,
+        "Name": "Queen of Swords",
+        "Description": "perceptive, independent, clear-minded"
+      },
+      {
+        "Number": 28,
+        "Name": "King of Swords",
+        "Description": "authority, truth, intellect"
+      },
+      {
+        "Number": 29,
+        "Name": "Ace of Wands",
+        "Description": "inspiration, new beginnings, growth"
+      },
+      {
+        "Number": 30,
+        "Name": "Two of Wands",
+        "Description": "planning, decisions, discovery"
+      },
+      {
+        "Number": 31,
+        "Name": "Three of Wands",
+        "Description": "expansion, foresight, opportunities"
+      },
+      {
+        "Number": 32,
+        "Name": "Four of Wands",
+        "Description": "celebration, stability, harmony"
+      },
+      {
+        "Number": 33,
+        "Name": "Five of Wands",
+        "Description": "conflict, competition, tension"
+      },
+      {
+        "Number": 34,
+        "Name": "Six of Wands",
+        "Description": "victory, recognition, success"
+      },
+      {
+        "Number": 35,
+        "Name": "Seven of Wands",
+        "Description": "defense, perseverance, challenge"
+      },
+      {
+        "Number": 36,
+        "Name": "Eight of Wands",
+        "Description": "speed, movement, progress"
+      },
+      {
+        "Number": 37,
+        "Name": "Nine of Wands",
+        "Description": "resilience, persistence, boundaries"
+      },
+      {
+        "Number": 38,
+        "Name": "Ten of Wands",
+        "Description": "burden, responsibility, struggle"
+      },
+      {
+        "Number": 39,
+        "Name": "Page of Wands",
+        "Description": "enthusiasm, exploration, discovery"
+      },
+      {
+        "Number": 40,
+        "Name": "Knight of Wands",
+        "Description": "adventure, impulsiveness, action"
+      },
+      {
+        "Number": 41,
+        "Name": "Queen of Wands",
+        "Description": "confidence, determination, independence"
+      },
+      {
+        "Number": 42,
+        "Name": "King of Wands",
+        "Description": "leadership, vision, charisma"
+      },
+      {
+        "Number": 43,
+        "Name": "Ace of Pentacles",
+        "Description": "prosperity, new opportunity, manifestation"
+      },
+      {
+        "Number": 44,
+        "Name": "Two of Pentacles",
+        "Description": "balance, adaptability, prioritization"
+      },
+      {
+        "Number": 45,
+        "Name": "Three of Pentacles",
+        "Description": "collaboration, skill, teamwork"
+      },
+      {
+        "Number": 46,
+        "Name": "Four of Pentacles",
+        "Description": "security, control, stability"
+      },
+      {
+        "Number": 47,
+        "Name": "Five of Pentacles",
+        "Description": "poverty, isolation, worry"
+      },
+      {
+        "Number": 48,
+        "Name": "Six of Pentacles",
+        "Description": "generosity, sharing, balance"
+      },
+      {
+        "Number": 49,
+        "Name": "Seven of Pentacles",
+        "Description": "assessment, patience, investment"
+      },
+      {
+        "Number": 50,
+        "Name": "Eight of Pentacles",
+        "Description": "diligence, mastery, skill development"
+      },
+      {
+        "Number": 51,
+        "Name": "Nine of Pentacles",
+        "Description": "self-sufficiency, luxury, independence"
+      },
+      {
+        "Number": 52,
+        "Name": "Ten of Pentacles",
+        "Description": "legacy, inheritance, culmination"
+      }
+   ]
+}   
