@@ -8,7 +8,26 @@ const HomePage = () => {
   const tarotDeck = [
     "/images/cards/MW_Death.jpg",
     "/images/cards/MW_Judgement.jpg",
+    "/images/cards/MW_Strength.jpg",
+    "/images/cards/MW_Temperance.jpg",
     "/images/cards/MW_Justice.jpg",
+    "/images/cards/MW_The_Chariot.jpg",
+    "/images/cards/MW_The_Devil.jpg",
+    "/images/cards/MW_The_Devil.jpg",
+    "/images/cards/MW_The_Emperor.jpg",
+    "/images/cards/MW_The_Empress.jpg",
+    "/images/cards/MW_The_Fool.jpg",
+    "/images/cards/MW_The_Hangedman.jpg",
+    "/images/cards/MW_The_Hierophant.jpg",
+    "/images/cards/MW_The_High_Priestess.jpg",
+    "/images/cards/MW_The_Lovers.jpg",
+    "/images/cards/MW_The_Magician.jpg",
+    "/images/cards/MW_The_Moon.jpg",
+    "/images/cards/MW_The_Star.jpg",
+    "/images/cards/MW_The_Sun.jpg",
+    "/images/cards/MW_The_Tower.jpg",
+    "/images/cards/MW_The_World.jpg",
+    "/images/cards/MW_Wheel_of_Fortune.jpg",
   ];
 
   const shuffleCards = () => {
