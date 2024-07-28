@@ -7,6 +7,7 @@ const HomePage = () => {
     const [shuffledCards, setShuffledCards] = useState<string[]>([]);
     const [majorArcana, setMajorArcana] = useState<any[]>([]);
     const [minorArcana, setMinorArcana] = useState<any[]>([]);
+    const [gameStarted, setGameStarted] = useState(false);
 
     useEffect(() => {
         const major = tarot["Major Arcana"];
@@ -17,6 +18,11 @@ const HomePage = () => {
     }, []);
 
     const tarotDeck = majorArcana.map(card => card.img);
+
+    const startGame = () => {
+        setShuffledCards(["/images/cards/back.jpg", "/images/cards/back.jpg", "/images/cards/back.jpg"]);
+        setGameStarted(true);
+    };
 
     const shuffleCards = () => {
         const deck = [...tarotDeck];
@@ -40,13 +46,24 @@ const HomePage = () => {
                     />
                 ))}
             </div>
+            {/* Button to start game */}
+            {!gameStarted && (
+                <button
+                    onClick={startGame}
+                    className="absolute left-1/2 top-0 z-20 mt-4 -translate-x-1/2 transform rounded-full bg-green-500 px-4 py-2 text-white hover:bg-green-700"
+                >
+                    Start Game
+                </button>
+            )}
             {/* Button to shuffle cards */}
-            <button
-                onClick={shuffleCards}
-                className="absolute left-1/2 top-0 z-20 mt-4 -translate-x-1/2 transform rounded-full bg-blue-500 px-4 py-2 text-white hover:bg-blue-700"
-            >
-                Tell me my fortune
-            </button>
+            {gameStarted && (
+                <button
+                    onClick={shuffleCards}
+                    className="absolute left-1/2 top-16 z-20 mt-4 -translate-x-1/2 transform rounded-full bg-blue-500 px-4 py-2 text-white hover:bg-blue-700"
+                >
+                    Tell me my fortune
+                </button>
+            )}
             <div className="relative h-[700px] w-full max-w-7xl overflow-hidden rounded-full shadow-lg">
                 <img
                     src="/table2.jpg"
