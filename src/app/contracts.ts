@@ -2,17 +2,16 @@ import { ContractPromise } from '@polkadot/api-contract';
 import { ApiPromise, WsProvider } from '@polkadot/api';
 import { web3FromSource } from '@polkadot/extension-dapp';
 import { InjectedAccountWithMeta } from '@polkadot/extension-inject/types';
+import type { WeightV2 } from '@polkadot/types/interfaces';
 
 import metadata from './tarot-contract.json';
 
 const address = "bRUguc1jqLCqy5XNdpt3QzQP5d76KoKk6um7tBsosVMcuZV";
 const providerUrl = "wss://rpc.shiden.astar.network/";
 
-// maximum gas to be consumed for the call. if limit is too small the call will fail.
-const gasLimit = 3000n * 1000000n;
 // a limit to how much Balance to be used to pay for the storage created by the contract call
 // if null is passed, unlimited balance can be used
-const storageDepositLimit = null;
+const storageDepositLimit = 50000000000000n;
 
 async function ContractApi(): Promise<ApiPromise> {
     const wsProvider = new WsProvider(providerUrl);
@@ -29,6 +28,11 @@ export async function fee(from: string) {
 export async function draw(account: InjectedAccountWithMeta, seed: Uint8Array, value: number) {
     const api = await ContractApi();
     const contract = new ContractPromise(api, metadata, address);
+    const gasLimit = api.registry.createType('WeightV2', {
+        refTime: 1000000000n,
+        proofSize: 100000,
+      }) as WeightV2;
+          
     const drawInstrinsic = await contract.tx.draw!({storageDepositLimit, gasLimit, value},
         seed);
         
@@ -45,7 +49,7 @@ export async function draw(account: InjectedAccountWithMeta, seed: Uint8Array, v
 
         const events: Record<string, number> = {};
         if (result.isInBlock || result.isFinalized) {
-            console.log(`Result: ${result}`);
+            console.log(`Result: ${JSON.stringify(result)}`);
         }
     });
 }
