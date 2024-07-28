@@ -10,12 +10,12 @@ export const PolkadotConnect = () => {
 
     const [renderCount, setRenderCount] = useState(0);
     console.log("render count");
-    const createTarotTx = async () => {
+    const createTarotTx = async (cb: (seed: Uint8Array) => void) => {
         const enabled = await web3Enable("Tarot");
         const accounts = await web3Accounts();    
 
         const encoder = new TextEncoder();
-        await draw(accounts[0]!, encoder.encode("slk1o23213122222"), 1000000000000000);
+        await draw(accounts[0]!, encoder.encode("slk1o23213122222"), 1000000000000000, cb);
     }
 
     

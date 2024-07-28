@@ -2,9 +2,12 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import tarot from "../tarotdepot.json";
-import { NewSeededRNG, Shuffle, ReadRange } from './random';
+import { NewSeededRNG, Shuffle, ReadRange, SeededRNG } from './random';
 import CircleAstrologyIcons from './CircleAstrologyIcons';
 import { PolkadotConnect } from "./polkadot-connect";
+import { draw } from "./contracts";
+import { web3Accounts, web3Enable } from "@polkadot/extension-dapp";
+import { blake2b } from '@noble/hashes/blake2b';
 
 const HomePage = () => {
     const [shuffledCards, setShuffledCards] = useState<any[]>([]);
@@ -12,11 +15,19 @@ const HomePage = () => {
     const [minorArcana, setMinorArcana] = useState<any[]>([]);
     const [gameStarted, setGameStarted] = useState(false);
     const [drawCount, setDrawCount] = useState(0);
+    const [rng, setRng] = useState<SeededRNG|null>(null);
+    const [drawSeed, setDrawSeed] = useState<Uint8Array|null>(null);
+    const [shuffle, setShuffle] = useState<number[]>([]);
     const [modalOpen, setModalOpen] = useState(false);
     const [cameraOpen, setCameraOpen] = useState(false);
     const [capturedImage, setCapturedImage] = useState<string | null>(null);
     const videoRef = useRef<HTMLVideoElement>(null);
     const canvasRef = useRef<HTMLCanvasElement>(null);
+
+    const empty = new Array<any>();
+    const major = empty.concat(tarot["Major Arcana"])
+    //const deck = major.concat(tarot["Minor Arcana"]);
+    const deck = major;
 
     useEffect(() => {
         const major = tarot["Major Arcana"];
@@ -24,24 +35,35 @@ const HomePage = () => {
         
         setMajorArcana(major);
         setMinorArcana(minor);
+
     }, []);
 
-    const startGame = () => {
-        const deck = majorArcana.map(card => ({ ...card, img: card.img }));
-        const shuffledDeck = shuffleDeck([...deck]);
-        setShuffledCards(shuffledDeck.slice(0, 3));
-        setDrawCount(0);
-        setGameStarted(true);
-        setModalOpen(false);
+    const createTarotTx = async () => {
+        const enabled = await web3Enable("Tarot");
+        const accounts = await web3Accounts();    
+
+        const encoder = new TextEncoder();
+        var seed = encoder.encode("");
+        //await updateSeed(seed);
+        if (capturedImage != null) {
+            seed = blake2b(encoder.encode(capturedImage));
+        }
+        await draw(accounts[0]!, seed, 1000000000000000, updateSeed);
+    }
+
+    const startGame = async () => {
+        await createTarotTx();
     };
 
-    const shuffleDeck = (deck) => {
-        for (let i = deck.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [deck[i], deck[j]] = [deck[j], deck[i]];
-        }
-        return deck;
-    };
+    const updateSeed = async (newSeed: Uint8Array) => {
+        setDrawSeed(newSeed);
+        const newRNG = NewSeededRNG(newSeed);
+        setRng(newRNG);
+        setDrawCount(0);
+        setShuffle(Shuffle(deck.length, newRNG));
+        setGameStarted(true);
+        setModalOpen(false);
+    }
 
     const drawCard = () => {
         if (drawCount < 3) {
@@ -113,11 +135,11 @@ const HomePage = () => {
                 <div className="absolute inset-0 z-20 flex items-center justify-center">
                     {gameStarted && (
                         <div className="flex space-x-4">
-                            {shuffledCards.map((card, index) => (
+                            {[...Array(3)].map((x, i) => (
                                 <img
-                                    key={index}
-                                    src={index < drawCount ? card.img : facedownCardSrc}
-                                    alt={`Card ${index + 1}`}
+                                    key={i}
+                                    src={i < drawCount ? deck[shuffle[i]!].img : facedownCardSrc}
+                                    alt={`Card ${i + 1}`}
                                     className="h-48 w-32"
                                 />
                             ))}
@@ -136,7 +158,7 @@ const HomePage = () => {
             {/* Modal for Card Name, Description, and Image */}
             {modalOpen && gameStarted && drawCount > 0 && (
                 <Modal
-                    card={shuffledCards[drawCount - 1]}
+                    card={deck[shuffle[drawCount]! - 1]}
                     onClose={() => setModalOpen(false)}
                 />
             )}
@@ -150,7 +172,6 @@ const HomePage = () => {
                     {drawCount < 3 ? `Draw Card ${Math.min(drawCount + 1, 3)}` : "Restart Game"}
                 </button>
             )}
-        <PolkadotConnect />
         </div>
     );
 };

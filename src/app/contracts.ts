@@ -25,7 +25,7 @@ export async function fee(from: string) {
     return feeVal;
 }
 
-export async function draw(account: InjectedAccountWithMeta, seed: Uint8Array, value: number) {
+export async function draw(account: InjectedAccountWithMeta, seed: Uint8Array, value: number, cb: (seed: Uint8Array) => void)  {
     const api = await ContractApi();
     const contract = new ContractPromise(api, metadata, address);
     const gasLimit = api.registry.createType('WeightV2', {
@@ -48,6 +48,7 @@ export async function draw(account: InjectedAccountWithMeta, seed: Uint8Array, v
             console.log(`Result: ${JSON.stringify(result)}`);
 
             console.log(`FINALIZED: ${result.status.asFinalized}`);
+            cb(result.status.asFinalized);
         }
     });
 }
