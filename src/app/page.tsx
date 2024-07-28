@@ -8,11 +8,12 @@ const HomePage = () => {
     const [majorArcana, setMajorArcana] = useState<any[]>([]);
     const [minorArcana, setMinorArcana] = useState<any[]>([]);
     const [gameStarted, setGameStarted] = useState(false);
+    const [drawCount, setDrawCount] = useState(0);
 
     useEffect(() => {
         const major = tarot["Major Arcana"];
         const minor = tarot["Minor Arcana"];
-
+        
         setMajorArcana(major);
         setMinorArcana(minor);
     }, []);
@@ -20,40 +21,50 @@ const HomePage = () => {
     const tarotDeck = majorArcana.map(card => card.img);
 
     const startGame = () => {
-        setShuffledCards(["/images/cards/back.jpg", "/images/cards/back.jpg", "/images/cards/back.jpg"]);
+        const shuffledDeck = shuffleDeck([...tarotDeck]);
+        setShuffledCards(shuffledDeck.slice(0, 3));
+        setDrawCount(0);
         setGameStarted(true);
     };
 
-    const shuffleCards = () => {
-        const deck = [...tarotDeck];
+    const shuffleDeck = (deck) => {
         for (let i = deck.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [deck[i], deck[j]] = [deck[j], deck[i]];
         }
-        setShuffledCards(deck.slice(0, 3)); // Get the top 3 cards after shuffling
+        return deck;
+    }
+
+    const drawCard = () => {
+        if (drawCount < 3) {
+            setDrawCount(drawCount + 1);
+        }
     };
+
+    // Placeholder image source for facedown card
+    const facedownCardSrc = "/images/cards/back.jpg";
 
     return (
         <div className="flex min-h-screen items-center justify-center bg-gray-100">
             {/* Display shuffled cards */}
             <div className="absolute z-10 flex space-x-4">
-                {shuffledCards.map((card, index) => (
+                {gameStarted && shuffledCards.map((card, index) => (
                     <img
                         key={index}
-                        src={card}
+                        src={index < drawCount ? card : facedownCardSrc}
                         alt={`Card ${index + 1}`}
                         className="h-48 w-32"
                     />
                 ))}
             </div>
-            {/* Button to start game or tell fortune */}
+            {/* Button to start game or draw cards */}
             <button
-                onClick={gameStarted ? shuffleCards : startGame}
+                onClick={!gameStarted ? startGame : drawCard}
                 className="absolute left-1/2 top-16 z-20 mt-4 -translate-x-1/2 transform rounded-full bg-green-500 px-4 py-2 text-white hover:bg-green-700"
             >
-                {gameStarted ? "Tell me my fortune" : "Start Game"}
+                {!gameStarted ? "Start Game" : `Draw Card ${drawCount + 1}`}
             </button>
-
+            
             <div className="relative h-[700px] w-full max-w-7xl overflow-hidden rounded-full shadow-lg">
                 <img
                     src="/table2.jpg"
