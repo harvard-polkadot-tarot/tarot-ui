@@ -20,6 +20,10 @@ https://tarodot.net/video.mp4
 
 https://www.canva.com/design/DAGMLjxrZCo/UrwsisFnD9zU4Wf8Nzg0oQ/edit
 
+# Presentation
+
+https://tarodot.net/presentation.mp4
+
 
 # Create T3 App
 
