@@ -5,9 +5,9 @@
       "Name": "The Fool",
       "Description": "A symbol of starting fresh, trusting in what lies ahead, a lack of experience, facing the unknown, beginner’s luck, going with the flow, and having faith in the greater universe.",
       "Crypto Link": {
-        "Name": "Laura Shin",
-        "Reason": "Shin's pioneering role in exploring and reporting on the crypto space embodies the Fool's spirit of adventure and new beginnings.",
-        "Bio": "A journalist and former senior editor at Forbes, first mainstream reporter to cover crypto full-time, host of Unchained and Unconfirmed podcasts.",
+        "Name": "Vitalik Buterin",
+        "Reason": "Buterin's balanced approach to innovation and his work in creating Ethereum align with the Fool's qualities of adventure and new beginnings.",
+        "Bio": "Co-founder of Ethereum, a leading blockchain platform for smart contracts and decentralized applications.",
         "Link": "https://laurashin.com/"
       },
       "img": "/images/cards/MW_The_Fool.jpg"
@@ -53,9 +53,9 @@
       "Name": "The Emperor",
       "Description": "Authority, structure, control",
       "Crypto Link": {
-        "Name": "Wei Dai",
-        "Reason": "Dai's foundational work in creating structured systems in the crypto world aligns with the Emperor's qualities of authority and establishing order.",
-        "Bio": "A computer engineer known for the b-money cryptocurrency system and contributions to cryptography.",
+        "Name": "Gavin Wood",
+        "Reason": "Wood's innovative contributions to blockchain technology and his role in shaping its future align with the the Emperor's themes of change and cycles.",
+        "Bio": "Co-founder of Ethereum and creator of Solidity, founder of Polkadot.",
         "Link": "https://en.wikipedia.org/wiki/Wei_Dai"
       },
       "img": "/images/cards/MW_The_Emperor.jpg"
@@ -101,9 +101,9 @@
       "Name": "Strength",
       "Description": "Courage, determination, patience",
       "Crypto Link": {
-        "Name": "Andreas M. Antonopoulos",
-        "Reason": "Antonopoulos's advocacy and educational efforts in the Bitcoin community reflect Strength's qualities of courage, determination, and patience.",
-        "Bio": "An author and Bitcoin evangelist, known for his books and educational work in the crypto space, guiding people through the complex world of Bitcoin and blockchain.",
+        "Name": "Emin Gün Sirer",
+        "Reason": "Sirer's work on Karma, as well as creating the leading protocols for on-chain and off-chain scaling, show the courage and determination exhibited the most by Strength.",
+        "Bio": "Creator of the first cryptocurrency based on a proof-of-work protocol, Karma, preceding Bitcoin by six years. ",
         "Link": "https://en.wikipedia.org/wiki/Andreas_Antonopoulos"
       },
       "img": "/images/cards/MW_Strength.jpg"
@@ -113,9 +113,9 @@
       "Name": "The Hermit",
       "Description": "Wisdom, introspection, guidance",
       "Crypto Link": {
-        "Name": "Adam Back",
-        "Reason": "Back's role as a guiding figure in the crypto community, with his deep understanding and contributions, aligns with the Hermit's qualities of wisdom and introspection.",
-        "Bio": "A British cryptographer who invented Hashcash and is the CEO of Blockstream.",
+        "Name": "Wei Dai",
+        "Reason": "Dai's foundational work in creating structured systems in the crypto world aligns with the Hermit's qualities of wisdom and guidance.",
+        "Bio": "A computer engineer known for the b-money cryptocurrency system and contributions to cryptography..",
         "Link": "https://en.wikipedia.org/wiki/Adam_Back"
       },
       "img": "/images/cards/MW_Death.jpg"
@@ -125,9 +125,9 @@
       "Name": "Wheel of Fortune",
       "Description": "Change, cycles, inevitable fate",
       "Crypto Link": {
-        "Name": "Gavin Wood",
-        "Reason": "Wood's innovative contributions to blockchain technology and his role in shaping its future align with the Wheel of Fortune's themes of change and cycles.",
-        "Bio": "Co-founder of Ethereum and creator of Solidity, founder of Polkadot.",
+        "Name": "Laura Shin",
+        "Reason": "Shin's pioneering role in exploring and reporting on the crypto space embodies the Wheel of Fortune's spirit of changing fortune and new beginnings.",
+        "Bio": "A journalist and former senior editor at Forbes, first mainstream reporter to cover crypto full-time, host of Unchained and Unconfirmed podcasts.",
         "Link": "https://en.wikipedia.org/wiki/Gavin_Wood"
       },
       "img": "/images/cards/MW_Wheel_of_Fortune.jpg"
@@ -149,9 +149,9 @@
       "Name": "The Hanged Man",
       "Description": "New perspectives, sacrifice, innovative thinking",
       "Crypto Link": {
-        "Name": "David Schwartz",
-        "Reason": "Schwartz's innovative approach to cross-border payments and his work on the XRP Ledger align with the Hanged Man's themes of new perspectives and innovative thinking.",
-        "Bio": "Chief Technology Officer at Ripple Labs, architect of the XRP Ledger.",
+        "Name": "Roger Ver",
+        "Reason": "Ver's controversial stance and advocacy for Bitcoin Cash, often challenging the status quo, align with the Hanged Man's themes of sacrifice and being resolute in new perspectives.",
+        "Bio": "Early investor in Bitcoin, advocate for Bitcoin Cash, known as "Bitcoin Jesus" for his evangelism of Bitcoin.",
         "Link": "https://www.mitfintech.com/speakers-2021/david-schwartz"
       },
       "img": "/images/cards/MW_The_Hangedman.jpg"
@@ -173,9 +173,9 @@
       "Name": "Temperance",
       "Description": "Balance, moderation, patience",
       "Crypto Link": {
-        "Name": "Vitalik Buterin",
-        "Reason": "Buterin's balanced approach to innovation and his work in creating Ethereum align with Temperance's qualities of balance and moderation.",
-        "Bio": "Co-founder of Ethereum, a leading blockchain platform for smart contracts and decentralized applications.",
+        "Name": "Adam Back",
+        "Reason": "Back's role as a guiding figure in the crypto community, with his deep understanding and contributions, aligns with Temperance's qualities of wisdom and patience.",
+        "Bio": "A British cryptographer who invented Hashcash and is the CEO of Blockstream.",
         "Link": "https://en.wikipedia.org/wiki/Vitalik_Buterin"
       },
       "img":"/images/cards/MW_Temperance.jpg"
@@ -185,9 +185,9 @@
         "Name": "The Devil",
         "Description": "Challenge, breaking free, confronting the status quo",
         "Crypto Link": {
-          "Name": "Roger Ver",
-          "Reason": "Ver's controversial stance and advocacy for Bitcoin Cash, often challenging the status quo, align with the Devil's themes of confrontation and breaking free.",
-          "Bio": "Early investor in Bitcoin, advocate for Bitcoin Cash, known as 'Bitcoin Jesus' for his evangelism of Bitcoin.",
+          "Name": "Riccardo Spagni",
+          "Reason": "Spagni's role in enhancing privacy and security in the digital currency space reflects Devil's themes of confronting the status quo.",
+          "Bio": "Former lead maintainer of Monero, a privacy-focused cryptocurrency.",
           "Link": "https://en.wikipedia.org/wiki/Roger_Ver"
         },
         "img":"/images/cards/MW_The_Devil.jpg"
@@ -245,9 +245,9 @@
         "Name": "Judgment",
         "Description": "Reflection, reckoning, awakening",
         "Crypto Link": {
-          "Name": "Riccardo Spagni",
-          "Reason": "Spagni's role in enhancing privacy and security in the digital currency space reflects Judgment's themes of reflection and awakening.",
-          "Bio": "Former lead maintainer of Monero, a privacy-focused cryptocurrency.",
+          "Name": "David Schwartz",
+          "Reason": "Schwartz's innovative approach to cross-border payments and his work on the XRP Ledger align with the Hanged Man's themes of new perspectives and innovative thinking.",
+          "Bio": "Chief Technology Officer at Ripple Labs, architect of the XRP Ledger.",
           "Link": "https://cryptoslate.com/people/riccardo-spagni/"
         },
         "img":"/images/cards/MW_Judgement.jpg"
