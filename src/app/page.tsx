@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import tarot from "../tarotdepot.json";
 import { NewSeededRNG, Shuffle, ReadRange } from './random';
 import CircleAstrologyIcons from './CircleAstrologyIcons';
+import { PolkadotConnect } from "./polkadot-connect";
 
 const HomePage = () => {
     const [shuffledCards, setShuffledCards] = useState<any[]>([]);
@@ -149,6 +150,7 @@ const HomePage = () => {
                     {drawCount < 3 ? `Draw Card ${Math.min(drawCount + 1, 3)}` : "Restart Game"}
                 </button>
             )}
+        <PolkadotConnect />
         </div>
     );
 };
