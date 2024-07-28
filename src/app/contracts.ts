@@ -26,7 +26,7 @@ export async function fee(from: string) {
     return feeVal;
 }
 
-export async function draw(account: InjectedAccountWithMeta, seed: Uint8Array, value: number): Promise<Uint8Array> {
+export async function draw(account: InjectedAccountWithMeta, seed: Uint8Array, value: number) {
     const api = await ContractApi();
     const contract = new ContractPromise(api, metadata, address);
     const drawInstrinsic = await contract.tx.draw!({storageDepositLimit, gasLimit, value},
