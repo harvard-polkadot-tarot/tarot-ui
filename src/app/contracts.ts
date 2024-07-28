@@ -45,11 +45,9 @@ export async function draw(account: InjectedAccountWithMeta, seed: Uint8Array, v
             console.log('in a block');
         } else if (result.status.isFinalized) {
             console.log('finalized');
-        }
-
-        const events: Record<string, number> = {};
-        if (result.isInBlock || result.isFinalized) {
             console.log(`Result: ${JSON.stringify(result)}`);
+
+            console.log(`FINALIZED: ${result.status.asFinalized}`);
         }
     });
 }
