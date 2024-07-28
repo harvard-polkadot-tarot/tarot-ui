@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import tarot from "../tarotdepot.json";
-import { NewSeededRNG, Shuffle, ReadRange, SeededRNG } from './random';
+import { NewSeededRNG, Shuffle, ReadRange, type SeededRNG } from './random';
 import CircleAstrologyIcons from './CircleAstrologyIcons';
 import { PolkadotConnect } from "./polkadot-connect";
 import { draw } from "./contracts";
@@ -43,7 +43,7 @@ const HomePage = () => {
         const accounts = await web3Accounts();    
 
         const encoder = new TextEncoder();
-        var seed = encoder.encode("");
+        let seed = encoder.encode("");
         //await updateSeed(seed);
         if (capturedImage != null) {
             seed = blake2b(encoder.encode(capturedImage));
@@ -122,7 +122,7 @@ const HomePage = () => {
 
             <div className="relative h-[700px] w-full max-w-7xl overflow-hidden rounded-full shadow-lg mt-8">
                 <img
-                    src="/table2.jpg"
+                    src="/table2-min.jpg"
                     alt="Tarot Table"
                     className="z-10 h-full w-full object-cover"
                 />
