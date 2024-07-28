@@ -131,7 +131,7 @@ const HomePage = () => {
                 )}
             </div>
 
-            {/* Modal for Card Name and Description */}
+            {/* Modal for Card Name, Description, and Image */}
             {modalOpen && gameStarted && drawCount > 0 && (
                 <Modal
                     card={shuffledCards[drawCount - 1]}
@@ -155,18 +155,19 @@ const HomePage = () => {
 const Modal = ({ card, onClose }) => {
     return (
         <div className="fixed inset-0 z-30 flex items-center justify-center bg-black bg-opacity-50">
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-                <h2 className="text-xl font-bold">
+            <div className="bg-white p-6 rounded-lg shadow-lg text-center max-w-md mx-auto">
+            <img src={card.img} alt={card.Name} className="mx-auto mb-4 h-80 w-50" /> {/* Increased width and height */}
+            <h2 className="text-xl font-bold mb-2">
                     {card.Name} - {card["Crypto Link"].Name}
                 </h2>
-                <p className="mt-2 text-md">{card.Description}</p>
+                <p className="text-md">{card.Description}</p>
                 <div className="mt-4">
                     <p>{card["Crypto Link"].Reason}</p>
                     <p>{card["Crypto Link"].Bio}</p>
                 </div>
                 <button
                     onClick={onClose}
-                    className="mt-4 rounded-full bg-green-500 px-4 py-2 text-white hover:bg-green-700"
+                    className="mt-4 rounded-full px-4 py-2 text-white bg-blue-500 hover:bg-blue-700"
                 >
                     Done
                 </button>
