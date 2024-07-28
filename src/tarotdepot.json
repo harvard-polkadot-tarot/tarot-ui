@@ -268,264 +268,316 @@
    ],
    "Minor Arcana": [
     {
-        "Number": 1,
-        "Name": "Ace of Cups",
-        "Description": "new beginnings, love, emotions"
+            "Number": 1,
+            "Name": "Ace of Cups",
+            "Description": "new beginnings, love, emotions",
+            "img": "/images/cards/MW_Ace_of_Cups.jpg"
       },
       {
-        "Number": 2,
-        "Name": "Two of Cups",
-        "Description": "partnership, harmony, attraction"
+            "Number": 2,
+            "Name": "Two of Cups",
+            "Description": "partnership, harmony, attraction",
+            "img": "/images/cards/MW_Two_of_Cups.jpg"
       },
       {
-        "Number": 3,
-        "Name": "Three of Cups",
-        "Description": "celebration, friendship, creativity"
+            "Number": 3,
+            "Name": "Three of Cups",
+            "Description": "celebration, friendship, creativity",
+            "img": "/images/cards/MW_Three_of_Cups.jpg"
       },
       {
-        "Number": 4,
-        "Name": "Four of Cups",
-        "Description": "contemplation, apathy, reevaluation"
+            "Number": 4,
+            "Name": "Four of Cups",
+            "Description": "contemplation, apathy, reevaluation",
+            "img": "/images/cards/MW_Four_of_Cups.jpg"
       },
       {
-        "Number": 5,
-        "Name": "Five of Cups",
-        "Description": "loss, grief, disappointment"
+            "Number": 5,
+            "Name": "Five of Cups",
+            "Description": "loss, grief, disappointment",
+            "img": "/images/cards/MW_Five_of_Cups.jpg"
       },
       {
-        "Number": 6,
-        "Name": "Six of Cups",
-        "Description": "nostalgia, memories, reunion"
+            "Number": 6,
+            "Name": "Six of Cups",
+            "Description": "nostalgia, memories, reunion",
+            "img": "/images/cards/MW_Six_of_Cups.jpg"
       },
       {
-        "Number": 7,
-        "Name": "Seven of Cups",
-        "Description": "choices, illusions, opportunities"
+            "Number": 7,
+            "Name": "Seven of Cups",
+            "Description": "choices, illusions, opportunities",
+            "img": "/images/cards/MW_Seven_of_Cups.jpg"
       },
       {
-        "Number": 8,
-        "Name": "Eight of Cups",
-        "Description": "withdrawal, journey, abandonment"
+            "Number": 8,
+            "Name": "Eight of Cups",
+            "Description": "withdrawal, journey, abandonment",
+            "img": "/images/cards/MW_Eight_of_Cups.jpg"
       },
       {
-        "Number": 9,
-        "Name": "Nine of Cups",
-        "Description": "contentment, satisfaction, wish fulfillment"
+            "Number": 9,
+            "Name": "Nine of Cups",
+            "Description": "contentment, satisfaction, wish fulfillment",
+            "img": "/images/cards/MW_Nine_of_Cups.jpg"
       },
       {
-        "Number": 10,
-        "Name": "Ten of Cups",
-        "Description": "happiness, fulfillment, family"
+            "Number": 10,
+            "Name": "Ten of Cups",
+            "Description": "happiness, fulfillment, family",
+            "img": "/images/cards/MW_Ten_of_Cups.jpg"
       },
       {
-        "Number": 11,
-        "Name": "Page of Cups",
-        "Description": "curiosity, creativity, messages"
+            "Number": 11,
+            "Name": "Page of Cups",
+            "Description": "curiosity, creativity, messages",
+            "img": "/images/cards/MW_Page_of_Cups.jpg"
       },
       {
-        "Number": 12,
-        "Name": "Knight of Cups",
-        "Description": "romance, adventure, charm"
+            "Number": 12,
+            "Name": "Knight of Cups",
+            "Description": "romance, adventure, charm",
+            "img": "/images/cards/MW_Knight_of_Cups.jpg"
       },
       {
-        "Number": 13,
-        "Name": "Queen of Cups",
-        "Description": "compassion, intuition, calm"
+            "Number": 13,
+            "Name": "Queen of Cups",
+            "Description": "compassion, intuition, calm",
+            "img": "/images/cards/MW_Queen_of_Cups.jpg"
       },
       {
-        "Number": 14,
-        "Name": "King of Cups",
-        "Description": "balance, wisdom, diplomacy"
+            "Number": 14,
+            "Name": "King of Cups",
+            "Description": "balance, wisdom, diplomacy",
+            "img": "/images/cards/MW_King_of_Cups.jpg"
       },
       {
-        "Number": 15,
-        "Name": "Ace of Swords",
-        "Description": "clarity, breakthrough, truth"
+            "Number": 15,
+            "Name": "Ace of Swords",
+            "Description": "clarity, breakthrough, truth",
+            "img": "/images/cards/MW_Ace_of_Swords.jpg"
       },
       {
-        "Number": 16,
-        "Name": "Two of Swords",
-        "Description": "indecision, stalemate, choices"
+            "Number": 16,
+            "Name": "Two of Swords",
+            "Description": "indecision, stalemate, choices",
+            "img": "/images/cards/MW_Two_of_Swords.jpg"
       },
       {
-        "Number": 17,
-        "Name": "Three of Swords",
-        "Description": "heartbreak, betrayal, sorrow"
+            "Number": 17,
+            "Name": "Three of Swords",
+            "Description": "heartbreak, betrayal, sorrow",
+            "img": "/images/cards/MW_Three_of_Swords.jpg"
       },
       {
-        "Number": 18,
-        "Name": "Four of Swords",
-        "Description": "rest, recovery, contemplation"
+            "Number": 18,
+            "Name": "Four of Swords",
+            "Description": "rest, recovery, contemplation",
+            "img": "/images/cards/MW_Four_of_Swords.jpg"
       },
       {
-        "Number": 19,
-        "Name": "Five of Swords",
-        "Description": "conflict, defeat, tension"
+            "Number": 19,
+            "Name": "Five of Swords",
+            "Description": "conflict, defeat, tension",
+            "img": "/images/cards/MW_Five_of_Swords.jpg"
       },
       {
-        "Number": 20,
-        "Name": "Six of Swords",
-        "Description": "transition, moving on, journey"
+            "Number": 20,
+            "Name": "Six of Swords",
+            "Description": "transition, moving on, journey",
+            "img": "/images/cards/MW_Six_of_Swords.jpg"
       },
       {
-        "Number": 21,
-        "Name": "Seven of Swords",
-        "Description": "deception, strategy, betrayal"
+            "Number": 21,
+            "Name": "Seven of Swords",
+            "Description": "deception, strategy, betrayal",
+            "img": "/images/cards/MW_Seven_of_Swords.jpg"
       },
       {
-        "Number": 22,
-        "Name": "Eight of Swords",
-        "Description": "restriction, fear, imprisonment"
+            "Number": 22,
+            "Name": "Eight of Swords",
+            "Description": "restriction, fear, imprisonment",
+            "img": "/images/cards/MW_Eight_of_Swords.jpg"
       },
       {
-        "Number": 23,
-        "Name": "Nine of Swords",
-        "Description": "anxiety, despair, nightmares"
+            "Number": 23,
+            "Name": "Nine of Swords",
+            "Description": "anxiety, despair, nightmares",
+            "img": "/images/cards/MW_Nine_of_Swords.jpg"
       },
       {
-        "Number": 24,
-        "Name": "Ten of Swords",
-        "Description": "endings, betrayal, loss"
+            "Number": 24,
+            "Name": "Ten of Swords",
+            "Description": "endings, betrayal, loss",
+            "img": "/images/cards/MW_Ten_of_Swords.jpg"
       },
       {
-        "Number": 25,
-        "Name": "Page of Swords",
-        "Description": "curiosity, vigilance, communication"
+            "Number": 25,
+            "Name": "Page of Swords",
+            "Description": "curiosity, vigilance, communication",
+            "img": "/images/cards/MW_Page_of_Swords.jpg"
       },
       {
-        "Number": 26,
-        "Name": "Knight of Swords",
-        "Description": "action, ambition, determination"
+            "Number": 26,
+            "Name": "Knight of Swords",
+            "Description": "action, ambition, determination",
+            "img": "/images/cards/MW_Knight_of_Swords.jpg"
+      }
+      {
+            "Number": 27,
+            "Name": "Queen of Swords",
+            "Description": "perceptive, independent, clear-minded",
+            "img": "/images/cards/MW_Queen_of_Swords.jpg"
       },
       {
-        "Number": 27,
-        "Name": "Queen of Swords",
-        "Description": "perceptive, independent, clear-minded"
+            "Number": 28,
+            "Name": "King of Swords",
+            "Description": "authority, truth, intellect",
+            "img": "/images/cards/MW_King_of_Swords.jpg"
       },
       {
-        "Number": 28,
-        "Name": "King of Swords",
-        "Description": "authority, truth, intellect"
+            "Number": 29,
+            "Name": "Ace of Wands",
+            "Description": "inspiration, new beginnings, growth",
+            "img": "/images/cards/MW_Ace_of_Wands.jpg"
       },
       {
-        "Number": 29,
-        "Name": "Ace of Wands",
-        "Description": "inspiration, new beginnings, growth"
+            "Number": 30,
+            "Name": "Two of Wands",
+            "Description": "planning, decisions, discovery",
+            "img": "/images/cards/MW_Two_of_Wands.jpg"
       },
       {
-        "Number": 30,
-        "Name": "Two of Wands",
-        "Description": "planning, decisions, discovery"
+            "Number": 31,
+            "Name": "Three of Wands",
+            "Description": "expansion, foresight, opportunities",
+            "img": "/images/cards/MW_Three_of_Wands.jpg"
       },
       {
-        "Number": 31,
-        "Name": "Three of Wands",
-        "Description": "expansion, foresight, opportunities"
+            "Number": 32,
+            "Name": "Four of Wands",
+            "Description": "celebration, stability, harmony",
+            "img": "/images/cards/MW_Four_of_Wands.jpg"
       },
       {
-        "Number": 32,
-        "Name": "Four of Wands",
-        "Description": "celebration, stability, harmony"
+            "Number": 33,
+            "Name": "Five of Wands",
+            "Description": "conflict, competition, tension",
+            "img": "/images/cards/MW_Five_of_Wands.jpg"
       },
       {
-        "Number": 33,
-        "Name": "Five of Wands",
-        "Description": "conflict, competition, tension"
+            "Number": 34,
+            "Name": "Six of Wands",
+            "Description": "victory, recognition, success",
+            "img": "/images/cards/MW_Six_of_Wands.jpg"
       },
       {
-        "Number": 34,
-        "Name": "Six of Wands",
-        "Description": "victory, recognition, success"
+            "Number": 35,
+            "Name": "Seven of Wands",
+            "Description": "defense, perseverance, challenge",
+            "img": "/images/cards/MW_Seven_of_Wands.jpg"
       },
       {
-        "Number": 35,
-        "Name": "Seven of Wands",
-        "Description": "defense, perseverance, challenge"
+            "Number": 36,
+            "Name": "Eight of Wands",
+            "Description": "speed, movement, progress",
+            "img": "/images/cards/MW_Eight_of_Wands.jpg"
       },
       {
-        "Number": 36,
-        "Name": "Eight of Wands",
-        "Description": "speed, movement, progress"
+            "Number": 37,
+            "Name": "Nine of Wands",
+            "Description": "resilience, persistence, boundaries",
+            "img": "/images/cards/MW_Nine_of_Wands.jpg"
       },
       {
-        "Number": 37,
-        "Name": "Nine of Wands",
-        "Description": "resilience, persistence, boundaries"
+            "Number": 38,
+            "Name": "Ten of Wands",
+            "Description": "burden, responsibility, struggle",
+            "img": "/images/cards/MW_Ten_of_Wands.jpg"
       },
       {
-        "Number": 38,
-        "Name": "Ten of Wands",
-        "Description": "burden, responsibility, struggle"
+            "Number": 39,
+            "Name": "Page of Wands",
+            "Description": "enthusiasm, exploration, discovery",
+            "img": "/images/cards/MW_Page_of_Wands.jpg"
       },
       {
-        "Number": 39,
-        "Name": "Page of Wands",
-        "Description": "enthusiasm, exploration, discovery"
+            "Number": 40,
+            "Name": "Knight of Wands",
+            "Description": "adventure, impulsiveness, action",
+            "img": "/images/cards/MW_Knight_of_Wands.jpg"
       },
       {
-        "Number": 40,
-        "Name": "Knight of Wands",
-        "Description": "adventure, impulsiveness, action"
+            "Number": 41,
+            "Name": "Queen of Wands",
+            "Description": "confidence, determination, independence",
+            "img": "/images/cards/MW_Queen_of_Wands.jpg"
       },
       {
-        "Number": 41,
-        "Name": "Queen of Wands",
-        "Description": "confidence, determination, independence"
+            "Number": 42,
+            "Name": "King of Wands",
+            "Description": "leadership, vision, charisma",
+            "img": "/images/cards/MW_King_of_Wands.jpg"
       },
       {
-        "Number": 42,
-        "Name": "King of Wands",
-        "Description": "leadership, vision, charisma"
+            "Number": 43,
+            "Name": "Ace of Pentacles",
+            "Description": "prosperity, new opportunity, manifestation",
+            "img": "/images/cards/MW_Ace_of_Pentacles.jpg"
       },
       {
-        "Number": 43,
-        "Name": "Ace of Pentacles",
-        "Description": "prosperity, new opportunity, manifestation"
+            "Number": 44,
+            "Name": "Two of Pentacles",
+            "Description": "balance, adaptability, prioritization",
+            "img": "/images/cards/MW_Two_of_Pentacles.jpg"
       },
       {
-        "Number": 44,
-        "Name": "Two of Pentacles",
-        "Description": "balance, adaptability, prioritization"
+            "Number": 45,
+            "Name": "Three of Pentacles",
+            "Description": "collaboration, skill, teamwork",
+            "img": "/images/cards/MW_Three_of_Pentacles.jpg"
       },
       {
-        "Number": 45,
-        "Name": "Three of Pentacles",
-        "Description": "collaboration, skill, teamwork"
+            "Number": 46,
+            "Name": "Four of Pentacles",
+            "Description": "security, control, stability",
+            "img": "/images/cards/MW_Four_of_Pentacles.jpg"
       },
       {
-        "Number": 46,
-        "Name": "Four of Pentacles",
-        "Description": "security, control, stability"
+            "Number": 47,
+            "Name": "Five of Pentacles",
+            "Description": "poverty, isolation, worry",
+            "img": "/images/cards/MW_Five_of_Pentacles.jpg"
       },
       {
-        "Number": 47,
-        "Name": "Five of Pentacles",
-        "Description": "poverty, isolation, worry"
+            "Number": 48,
+            "Name": "Six of Pentacles",
+            "Description": "generosity, sharing, balance",
+            "img": "/images/cards/MW_Six_of_Pentacles.jpg"
       },
       {
-        "Number": 48,
-        "Name": "Six of Pentacles",
-        "Description": "generosity, sharing, balance"
+            "Number": 49,
+            "Name": "Seven of Pentacles",
+            "Description": "assessment, patience, investment",
+            "img": "/images/cards/MW_Seven_of_Pentacles.jpg"
       },
       {
-        "Number": 49,
-        "Name": "Seven of Pentacles",
-        "Description": "assessment, patience, investment"
+            "Number": 50,
+            "Name": "Eight of Pentacles",
+            "Description": "diligence, mastery, skill development",
+            "img": "/images/cards/MW_Eight_of_Pentacles.jpg"
       },
       {
-        "Number": 50,
-        "Name": "Eight of Pentacles",
-        "Description": "diligence, mastery, skill development"
+            "Number": 51,
+            "Name": "Nine of Pentacles",
+            "Description": "self-sufficiency, luxury, independence",
+            "img": "/images/cards/MW_Nine_of_Pentacles.jpg"
       },
       {
-        "Number": 51,
-        "Name": "Nine of Pentacles",
-        "Description": "self-sufficiency, luxury, independence"
-      },
-      {
-        "Number": 52,
-        "Name": "Ten of Pentacles",
-        "Description": "legacy, inheritance, culmination"
+            "Number": 52,
+            "Name": "Ten of Pentacles",
+            "Description": "legacy, inheritance, culmination",
+            "img": "/images/cards/MW_Ten_of_Pentacles.jpg"
       }
    ]
 }   
