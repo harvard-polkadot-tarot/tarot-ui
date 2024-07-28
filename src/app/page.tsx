@@ -43,18 +43,22 @@ const HomePage = () => {
         }
     };
 
+    const restartGame = () => {
+        setGameStarted(false);
+        setDrawCount(0);
+    };
+
     // Placeholder image source for facedown card
     const facedownCardSrc = "/images/cards/back.jpg";
 
     return (
         <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100 pt-16">
-            {/* Button to start game or draw cards */}
+            {/* Button to start game, draw cards or restart game */}
             <button
-                onClick={!gameStarted ? startGame : (drawCount < 3 ? drawCard : null)}
-                className={`z-20 mt-4 rounded-full px-4 py-2 text-white ${drawCount >= 3 ? 'bg-gray-500 cursor-not-allowed' : 'bg-green-500 hover:bg-green-700'}`}
-                disabled={drawCount >= 3}
+                onClick={!gameStarted ? startGame : (drawCount < 3 ? drawCard : restartGame)}
+                className={`z-20 mt-4 rounded-full px-4 py-2 text-white ${!gameStarted ? 'bg-blue-500 hover:bg-blue-700' : (drawCount >= 3 ? 'bg-red-500 hover:bg-red-700' : 'bg-green-500 hover:bg-green-700')}`}
             >
-                {!gameStarted ? "Start Game" : `Draw Card ${Math.min(drawCount + 1, 3)}`}
+                {!gameStarted ? "Start Game" : (drawCount < 3 ? `Draw Card ${Math.min(drawCount + 1, 3)}` : "Restart Game")}
             </button>
             
             <div className="relative h-[700px] w-full max-w-7xl overflow-hidden rounded-full shadow-lg mt-8">
@@ -101,7 +105,7 @@ const Modal = ({ card, onClose }) => {
       <div className="fixed inset-0 z-30 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-6 rounded-lg shadow-lg text-center">
               <h2 className="text-xl font-bold">
-                  {card.Name} - {card["Crypto Link"].Name}
+                  {card.Name} - Crypto OG: {card["Crypto Link"].Name}
               </h2>
               <p className="mt-2 text-md">{card.Description}</p>
               <div className="mt-4">
