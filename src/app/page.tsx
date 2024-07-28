@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import tarot from "../tarotdepot.json";
 
 const HomePage = () => {
-    const [shuffledCards, setShuffledCards] = useState<string[]>([]);
+    const [shuffledCards, setShuffledCards] = useState<any[]>([]);
     const [majorArcana, setMajorArcana] = useState<any[]>([]);
     const [minorArcana, setMinorArcana] = useState<any[]>([]);
     const [gameStarted, setGameStarted] = useState(false);
@@ -18,10 +18,9 @@ const HomePage = () => {
         setMinorArcana(minor);
     }, []);
 
-    const tarotDeck = majorArcana.map(card => card.img);
-
     const startGame = () => {
-        const shuffledDeck = shuffleDeck([...tarotDeck]);
+        const deck = majorArcana.map(card => ({ ...card, img: card.img }));
+        const shuffledDeck = shuffleDeck([...deck]);
         setShuffledCards(shuffledDeck.slice(0, 3));
         setDrawCount(0);
         setGameStarted(true);
@@ -33,7 +32,7 @@ const HomePage = () => {
             [deck[i], deck[j]] = [deck[j], deck[i]];
         }
         return deck;
-    }
+    };
 
     const drawCard = () => {
         if (drawCount < 3) {
@@ -45,13 +44,13 @@ const HomePage = () => {
     const facedownCardSrc = "/images/cards/back.jpg";
 
     return (
-        <div className="flex min-h-screen items-center justify-center bg-gray-100">
+        <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100">
             {/* Display shuffled cards */}
             <div className="absolute z-10 flex space-x-4">
                 {gameStarted && shuffledCards.map((card, index) => (
                     <img
                         key={index}
-                        src={index < drawCount ? card : facedownCardSrc}
+                        src={index < drawCount ? card.img : facedownCardSrc}
                         alt={`Card ${index + 1}`}
                         className="h-48 w-32"
                     />
@@ -60,11 +59,11 @@ const HomePage = () => {
             {/* Button to start game or draw cards */}
             <button
                 onClick={!gameStarted ? startGame : drawCard}
-                className="absolute left-1/2 top-16 z-20 mt-4 -translate-x-1/2 transform rounded-full bg-green-500 px-4 py-2 text-white hover:bg-green-700"
+                className="absolute left-1/2 top-3 z-20 mt-4 -translate-x-1/2 transform rounded-full bg-green-500 px-4 py-2 text-white hover:bg-green-700"
             >
                 {!gameStarted ? "Start Game" : `Draw Card ${drawCount + 1}`}
             </button>
-            
+
             <div className="relative h-[700px] w-full max-w-7xl overflow-hidden rounded-full shadow-lg">
                 <img
                     src="/table2.jpg"
@@ -77,6 +76,16 @@ const HomePage = () => {
                 </div>
 
                 <div className="absolute z-20 flex h-4/5 w-4/5 flex-col items-center justify-center space-y-4 rounded-full bg-white/50"></div>
+            </div>
+
+            {/* Card Name and Description */}
+            <div className="mt-8 text-center">
+                {gameStarted && drawCount > 0 && (
+                    <div>
+                        <h2 className="text-xl font-bold">{shuffledCards[drawCount - 1].Name}</h2>
+                        <p className="text-md">{shuffledCards[drawCount - 1].Description}</p>
+                    </div>
+                )}
             </div>
         </div>
     );
