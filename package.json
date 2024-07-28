@@ -11,6 +11,10 @@
   },
   "dependencies": {
     "@noble/hashes": "^1.4.0",
+    "@polkadot/api": "^12.2.2",
+    "@polkadot/api-contract": "^12.2.2",
+    "@polkadot/extension-dapp": "^0.49.3",
+    "@polkadot/extension-inject": "^0.49.3",
     "@t3-oss/env-nextjs": "^0.10.1",
     "blake2b": "^2.1.4",
     "geist": "^1.3.0",
