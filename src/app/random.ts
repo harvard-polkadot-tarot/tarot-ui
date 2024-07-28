@@ -22,8 +22,11 @@ export function NewSeededRNG(seed: Uint8Array): SeededRNG {
             var stream: Uint8Array = new Uint8Array(numBytes);
             var count: number = 0;
             while (count < numBytes) {
-                const bytesLeft = count - numBytes;
-                const d: Uint8Array = this.Forward();
+                const bytesLeft = numBytes - count;
+                var d: Uint8Array = this.Forward();
+                if (bytesLeft < d.length) {
+                    d = d.subarray(0, bytesLeft);
+                }
                 stream.set(d, count);
                 count += d.length;
             }
