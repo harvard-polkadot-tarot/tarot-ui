@@ -42,5 +42,10 @@ export async function draw(account: InjectedAccountWithMeta, seed: Uint8Array, v
         } else if (result.status.isFinalized) {
             console.log('finalized');
         }
+
+        const events: Record<string, number> = {};
+        if (result.isInBlock || result.isFinalized) {
+            console.log(`Result: ${result}`);
+        }
     });
 }
