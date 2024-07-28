@@ -50,10 +50,11 @@ const HomePage = () => {
         <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100 pt-16">
             {/* Button to start game or draw cards */}
             <button
-                onClick={!gameStarted ? startGame : drawCard}
-                className="z-20 mt-4 rounded-full bg-green-500 px-4 py-2 text-white hover:bg-green-700"
+                onClick={!gameStarted ? startGame : (drawCount < 3 ? drawCard : null)}
+                className={`z-20 mt-4 rounded-full px-4 py-2 text-white ${drawCount >= 3 ? 'bg-gray-500 cursor-not-allowed' : 'bg-green-500 hover:bg-green-700'}`}
+                disabled={drawCount >= 3}
             >
-                {!gameStarted ? "Start Game" : `Draw Card ${drawCount + 1}`}
+                {!gameStarted ? "Start Game" : `Draw Card ${Math.min(drawCount + 1, 3)}`}
             </button>
             
             <div className="relative h-[700px] w-full max-w-7xl overflow-hidden rounded-full shadow-lg mt-8">
@@ -96,21 +97,28 @@ const HomePage = () => {
 };
 
 const Modal = ({ card, onClose }) => {
-    return (
-        <div className="fixed inset-0 z-30 flex items-center justify-center bg-black bg-opacity-50">
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-                <h2 className="text-xl font-bold">{card.Name}</h2>
-                <p className="mt-2 text-md">{card.Description}</p>
-                <button
-                    onClick={onClose}
-                    className="mt-4 rounded-full bg-red-500 px-4 py-2 text-white hover:bg-red-700"
-                >
-                    Close
-                </button>
-            </div>
-        </div>
-    );
+  return (
+      <div className="fixed inset-0 z-30 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+              <h2 className="text-xl font-bold">
+                  {card.Name} - {card["Crypto Link"].Name}
+              </h2>
+              <p className="mt-2 text-md">{card.Description}</p>
+              <div className="mt-4">
+                  <p>{card["Crypto Link"].Reason}</p>
+                  <p>{card["Crypto Link"].Bio}</p>
+              </div>
+              <button
+                  onClick={onClose}
+                  className="mt-4 rounded-full bg-green-500 px-4 py-2 text-white hover:bg-green-700"
+              >
+                  Done
+              </button>
+          </div>
+      </div>
+  );
 };
+
 
 const CircleAstrologyIcons = () => {
     const radius = 300; // Increased radius for a larger circle
