@@ -158,7 +158,7 @@ const HomePage = () => {
             {/* Modal for Card Name, Description, and Image */}
             {modalOpen && gameStarted && drawCount > 0 && (
                 <Modal
-                    card={deck[shuffle[drawCount]! - 1]}
+                    card={deck[shuffle[drawCount-1]!]}
                     onClose={() => setModalOpen(false)}
                 />
             )}
