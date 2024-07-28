@@ -1,8 +1,8 @@
 "use client"; // This marks the file as a Client Component
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import tarot from "../tarotdepot.json";
-import { NewSeededRNG, Shuffle, ReadRange } from './random'
+import { NewSeededRNG, Shuffle, ReadRange } from './random';
 
 const HomePage = () => {
     const [shuffledCards, setShuffledCards] = useState<any[]>([]);
@@ -11,6 +11,10 @@ const HomePage = () => {
     const [gameStarted, setGameStarted] = useState(false);
     const [drawCount, setDrawCount] = useState(0);
     const [modalOpen, setModalOpen] = useState(false);
+    const [cameraOpen, setCameraOpen] = useState(false);
+    const [capturedImage, setCapturedImage] = useState<string | null>(null);
+    const videoRef = useRef<HTMLVideoElement>(null);
+    const canvasRef = useRef<HTMLCanvasElement>(null);
 
     useEffect(() => {
         const major = tarot["Major Arcana"];
@@ -47,6 +51,35 @@ const HomePage = () => {
     const restartGame = () => {
         setGameStarted(false);
         setDrawCount(0);
+        setCapturedImage(null);
+    };
+
+    const openCamera = () => {
+        setCameraOpen(true);
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(stream => {
+                if (videoRef.current) {
+                    videoRef.current.srcObject = stream;
+                    videoRef.current.play();
+                }
+            })
+            .catch(err => {
+                console.error("Error accessing webcam:", err);
+            });
+    };
+
+    const captureImage = () => {
+        if (videoRef.current && canvasRef.current) {
+            const context = canvasRef.current.getContext('2d');
+            if (context) {
+                context.drawImage(videoRef.current, 0, 0, canvasRef.current.width, canvasRef.current.height);
+                const dataURL = canvasRef.current.toDataURL('image/png');
+                setCapturedImage(dataURL);
+                videoRef.current.srcObject && (videoRef.current.srcObject as MediaStream).getTracks().forEach(track => track.stop());
+                setCameraOpen(false);
+                startGame();
+            }
+        }
     };
 
     // Placeholder image source for facedown card
@@ -54,14 +87,15 @@ const HomePage = () => {
 
     return (
         <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100 pt-16">
-            {/* Button to start game, draw cards or restart game */}
-            <button
-                onClick={!gameStarted ? startGame : (drawCount < 3 ? drawCard : restartGame)}
-                className={`z-20 mt-4 rounded-full px-4 py-2 text-white ${!gameStarted ? 'bg-blue-500 hover:bg-blue-700' : (drawCount >= 3 ? 'bg-red-500 hover:bg-red-700' : 'bg-green-500 hover:bg-green-700')}`}
-            >
-                {!gameStarted ? "Start Game" : (drawCount < 3 ? `Draw Card ${Math.min(drawCount + 1, 3)}` : "Restart Game")}
-            </button>
-            
+            {!capturedImage && (
+                <button
+                    onClick={!cameraOpen ? openCamera : captureImage}
+                    className="z-20 mt-4 rounded-full px-4 py-2 text-white bg-blue-500 hover:bg-blue-700"
+                >
+                    {!cameraOpen ? "Start Game (Take Palm Photo)" : "Capture Photo"}
+                </button>
+            )}
+
             <div className="relative h-[700px] w-full max-w-7xl overflow-hidden rounded-full shadow-lg mt-8">
                 <img
                     src="/table2.jpg"
@@ -88,6 +122,13 @@ const HomePage = () => {
                         </div>
                     )}
                 </div>
+
+                {cameraOpen && (
+                    <div className="absolute inset-0 z-30 flex flex-col items-center justify-center bg-black bg-opacity-50">
+                        <video ref={videoRef} className="h-64 w-64"></video>
+                        <canvas ref={canvasRef} className="hidden" width="640" height="480"></canvas>
+                    </div>
+                )}
             </div>
 
             {/* Modal for Card Name and Description */}
@@ -97,31 +138,41 @@ const HomePage = () => {
                     onClose={() => setModalOpen(false)}
                 />
             )}
+
+            {/* Button to draw cards or restart game */}
+            {gameStarted && (
+                <button
+                    onClick={drawCount < 3 ? drawCard : restartGame}
+                    className={`z-20 mt-4 rounded-full px-4 py-2 text-white ${drawCount >= 3 ? 'bg-red-500 hover:bg-red-700' : 'bg-green-500 hover:bg-green-700'}`}
+                >
+                    {drawCount < 3 ? `Draw Card ${Math.min(drawCount + 1, 3)}` : "Restart Game"}
+                </button>
+            )}
         </div>
     );
 };
 
 const Modal = ({ card, onClose }) => {
-  return (
-      <div className="fixed inset-0 z-30 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <h2 className="text-xl font-bold">
-                  {card.Name} - Crypto OG: {card["Crypto Link"].Name}
-              </h2>
-              <p className="mt-2 text-md">{card.Description}</p>
-              <div className="mt-4">
-                  <p>{card["Crypto Link"].Reason}</p>
-                  <p>{card["Crypto Link"].Bio}</p>
-              </div>
-              <button
-                  onClick={onClose}
-                  className="mt-4 rounded-full bg-green-500 px-4 py-2 text-white hover:bg-green-700"
-              >
-                  Done
-              </button>
-          </div>
-      </div>
-  );
+    return (
+        <div className="fixed inset-0 z-30 flex items-center justify-center bg-black bg-opacity-50">
+            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+                <h2 className="text-xl font-bold">
+                    {card.Name} - {card["Crypto Link"].Name}
+                </h2>
+                <p className="mt-2 text-md">{card.Description}</p>
+                <div className="mt-4">
+                    <p>{card["Crypto Link"].Reason}</p>
+                    <p>{card["Crypto Link"].Bio}</p>
+                </div>
+                <button
+                    onClick={onClose}
+                    className="mt-4 rounded-full bg-green-500 px-4 py-2 text-white hover:bg-green-700"
+                >
+                    Done
+                </button>
+            </div>
+        </div>
+    );
 };
 
 
