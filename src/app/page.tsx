@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import tarot from "../tarotdepot.json";
+import { NewSeededRNG, Shuffle, ReadRange } from './random'
 
 const HomePage = () => {
     const [shuffledCards, setShuffledCards] = useState<any[]>([]);
