@@ -1,9 +1,21 @@
 "use client"; // This marks the file as a Client Component
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import tarot from "../tarotdepot.json";
 
 const HomePage = () => {
   const [shuffledCards, setShuffledCards] = useState<string[]>([]);
+  const [majorArcana, setMajorArcana] = useState<any[]>([]);
+  const [minorArcana, setMinorArcana] = useState<any[]>([]);
+
+
+  useEffect(() => {
+    const major = tarot["Major Arcana"];
+    const minor = tarot["Minor Arcana"];
+
+    setMajorArcana(major);
+    setMinorArcana(minor);
+  }, []);
 
   const tarotDeck = [
     "/images/cards/MW_Death.jpg",
@@ -29,6 +41,7 @@ const HomePage = () => {
     "/images/cards/MW_The_World.jpg",
     "/images/cards/MW_Wheel_of_Fortune.jpg",
   ];
+
 
   const shuffleCards = () => {
     const deck = [...tarotDeck];
