@@ -1,3 +1,26 @@
+You can deploy with:
+
+```
+npm run dev
+```
+
+# Screenshots
+
+![1](./screenshot1.png?raw=true)
+![2](./screenshot2.png?raw=true)
+![3](./screenshot3.png?raw=true)
+
+
+# Video
+
+https://tarodot.net/video.mp4
+
+
+# Slides
+
+https://www.canva.com/design/DAGMLjxrZCo/UrwsisFnD9zU4Wf8Nzg0oQ/edit
+
+
 # Create T3 App
 
 This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
